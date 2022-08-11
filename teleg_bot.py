@@ -7,11 +7,11 @@ import aiohttp
 import os
 
 
-DJ_URL = os.getenv('DJANGO_SERVER_URL')
+DJ_URL = os.environ['DJANGO_SERVER_URL']
 CHECK_URL = f"{DJ_URL}/check-id/"
 REGISTER_URL = f"{DJ_URL}/register-bot/"
 
-bot =  Bot(token = os.environ.get("TOKEN"))
+bot =  Bot(token = os.environ['TOKEN'])
 dp = Dispatcher(bot, storage=MemoryStorage())
 
 
