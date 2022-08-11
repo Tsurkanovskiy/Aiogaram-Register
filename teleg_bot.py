@@ -24,7 +24,7 @@ class RegisterStates(StatesGroup):
 
 
 
-@dp.message_handler(commands = ['start','help'])
+@dp.message_handler(commands = ['start','help'], state = "*")
 async def echo_help(message: types.Message):
 	await message.answer("Список команд:\n/help\n/register")
 
